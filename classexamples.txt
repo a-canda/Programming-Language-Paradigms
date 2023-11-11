@@ -1,0 +1,50 @@
+1.
+
+let addfirsttwo l = let h::t = l in h + List.hd t;;
+
+2.
+
+let isnil l = if l = [] then true else false;;
+
+3. 
+
+let rec len l = if l = [] then 0 else len(List.tl l) + 1;;
+
+4.
+
+let addfirsttwolengths l = len(List.hd l) + len(List.hd(List.tl l);;
+
+5.
+
+let rec sum l = if l = [] then 0 else List.hd l + sum(List.tl l);;
+
+6.
+
+let rec range n m = if n > m then [] else n::(range(n+1)m);;
+
+7.
+
+let rec allpos l = if l = [] then true else if List.hd l <= 0 then false else allpos(List.tl l);;
+
+8.
+
+let rec concat l = if l = [] then [] else (List.hd l)@ (concat(List.tl l));;
+
+9.
+
+let rec reverse l = if l = [] then [] else (reverse(List.tl l)) @ [List.hd l];;
+
+10.
+
+let rec remove_first a l = if l = [] then [] else if (List.hd l) = a then List.tl l else (List.hd l)::(remove_first a(List.tl l));;
+
+11.
+
+
+12.
+
+let rec insert a l = if l = [] then [a] else if (a > List.hd l) then (List.hd l)::(insert a (List.tl l)) else a::l;;
+
+13.
+
+
